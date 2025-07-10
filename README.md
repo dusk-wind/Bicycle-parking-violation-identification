@@ -18,14 +18,14 @@
 
 ##  技术栈与平台
 
-- **前端**：Vue3 + TypeScript + Ant Design Vue  
+前端：Vue3 + TypeScript + Ant Design Vue  
   实现数据展示、用户交互与系统可视化界面。
 
-- **后端**：Spring Boot + MyBatis + MySQL  
+后端：Spring Boot + MyBatis + MySQL  
   提供稳定的 RESTful API 支撑系统逻辑与数据存储。
 
-- **推理服务**：Python + Flask + YOLOv8（量化模型）  
+推理服务：Python + Flask + YOLOv8（量化模型）  
   在边缘设备上部署轻量模型，进行高效的违停行为检测。
 
-- **部署平台**：地平线 RDK X5 边缘计算设备  
+部署平台：地平线 RDK X5 边缘计算设备  
   搭载地平线 AI 芯片，实现低延迟本地推理，适配多路摄像头。
