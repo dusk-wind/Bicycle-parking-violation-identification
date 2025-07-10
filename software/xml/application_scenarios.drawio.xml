@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="27.2.0">
+  <diagram name="应用场景图" id="application-scenarios">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 标题 -->
+        <mxCell id="title" value="智能自行车违停检测系统应用场景" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1D3557;" vertex="1" parent="1">
+          <mxGeometry x="450" y="30" width="500" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 中心系统 -->
+        <mxCell id="central-system" value="智能违停&lt;br&gt;检测系统" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1f4e79;strokeColor=#1D3557;strokeWidth=3;fontSize=16;fontStyle=1;fontColor=white;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="380" width="160" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- 校园管理 -->
+        <mxCell id="campus-management" value="校园管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1e7dd;strokeColor=#0f5132;strokeWidth=2;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="campus-details" value="• 高等院校停车管理&lt;br&gt;• 中小学校园秩序维护&lt;br&gt;• 人力成本节省60%&lt;br&gt;• 智能化巡查替代" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#6c757d;fontSize=11;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="240" width="220" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 城市交通 -->
+        <mxCell id="traffic-management" value="城市交通管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="traffic-details" value="• 地铁站非机动车管理&lt;br&gt;• 公交枢纽通道保障&lt;br&gt;• 智慧城市平台集成&lt;br&gt;• 公共空间优化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#6c757d;fontSize=11;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="240" width="220" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 商业区域 -->
+        <mxCell id="commercial-management" value="商业区域管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2e3e5;strokeColor=#383d41;strokeWidth=2;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="commercial-details" value="• 商场停车规范化&lt;br&gt;• 写字楼环境美化&lt;br&gt;• 住宅小区秩序管理&lt;br&gt;• 用户体验提升" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#6c757d;fontSize=11;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="720" width="220" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 工业园区 -->
+        <mxCell id="industrial-management" value="工业园区监管" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d4edda;strokeColor=#155724;strokeWidth=2;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="industrial-details" value="• 消防通道安全保障&lt;br&gt;• 安全出入口管控&lt;br&gt;• 产业园区秩序维护&lt;br&gt;• 安全生产支撑" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#6c757d;fontSize=11;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="720" width="220" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 政府监管 -->
+        <mxCell id="government-supervision" value="政府监管应用" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b3d9ff;strokeColor=#0066cc;strokeWidth=2;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="government-details" value="• 城管执法数据支撑&lt;br&gt;• 交警违规证据收集&lt;br&gt;• 统计分析报表生成&lt;br&gt;• 执法效率提升" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#6c757d;fontSize=11;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="240" width="220" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 智慧停车 -->
+        <mxCell id="smart-parking" value="智慧停车场景" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e2ef;strokeColor=#2e4a72;strokeWidth=2;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="parking-details" value="• 非机动车停车场管理&lt;br&gt;• 车位引导系统集成&lt;br&gt;• 自动化计费服务&lt;br&gt;• 停车数据分析" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#6c757d;fontSize=11;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="720" width="220" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 扩展应用 -->
+        <mxCell id="future-expansion" value="未来扩展应用" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f2ff;strokeColor=#003d7a;strokeWidth=2;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="expansion-details" value="• 电动车违规检测&lt;br&gt;• 摩托车管理扩展&lt;br&gt;• 人员聚集识别&lt;br&gt;• 多场景行为分析" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#6c757d;fontSize=11;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="720" width="220" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接线 -->
+        <!-- 校园管理连接 -->
+        <mxCell id="conn-campus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#495057;curved=1;" edge="1" parent="1" source="campus-management" target="central-system">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 城市交通连接 -->
+        <mxCell id="conn-traffic" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#495057;curved=1;" edge="1" parent="1" source="traffic-management" target="central-system">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 政府监管连接 -->
+        <mxCell id="conn-government" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#495057;curved=1;" edge="1" parent="1" source="government-supervision" target="central-system">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 商业区域连接 -->
+        <mxCell id="conn-commercial" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#495057;curved=1;" edge="1" parent="1" source="commercial-management" target="central-system">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 工业园区连接 -->
+        <mxCell id="conn-industrial" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#495057;curved=1;" edge="1" parent="1" source="industrial-management" target="central-system">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 智慧停车连接 -->
+        <mxCell id="conn-parking" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#495057;curved=1;" edge="1" parent="1" source="smart-parking" target="central-system">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 扩展应用连接 -->
+        <mxCell id="conn-expansion" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#495057;curved=1;" edge="1" parent="1" source="future-expansion" target="central-system">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 细节连接线 -->
+        <mxCell id="detail-conn1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#adb5bd;dashed=1;" edge="1" parent="1" source="campus-details" target="campus-management">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="detail-conn2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#adb5bd;dashed=1;" edge="1" parent="1" source="traffic-details" target="traffic-management">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="detail-conn3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#adb5bd;dashed=1;" edge="1" parent="1" source="government-details" target="government-supervision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="detail-conn4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#adb5bd;dashed=1;" edge="1" parent="1" source="commercial-management" target="commercial-details">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="detail-conn5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#adb5bd;dashed=1;" edge="1" parent="1" source="industrial-management" target="industrial-details">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="detail-conn6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#adb5bd;dashed=1;" edge="1" parent="1" source="smart-parking" target="parking-details">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="detail-conn7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;strokeColor=#adb5bd;dashed=1;" edge="1" parent="1" source="future-expansion" target="expansion-details">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

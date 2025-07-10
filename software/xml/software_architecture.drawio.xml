@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="27.2.0">
+  <diagram name="软件系统架构图" id="software_architecture_diagram">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 系统标题 -->
+        <mxCell id="title" value="智慧校园违停检测系统 - 软件架构图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1d1d1f;" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="500" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- 前端应用层 -->
+        <mxCell id="frontend_layer" value="前端应用层 (Frontend Application)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f7;strokeColor=#d6d6d6;fontSize=16;fontStyle=1;align=center;verticalAlign=top;spacing=10;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="1080" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- 前端模块 -->
+        <mxCell id="dashboard" value="首页仪表盘&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;系统概览&lt;br/&gt;实时统计&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="data_analysis" value="数据分析页&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;趋势图表&lt;br/&gt;统计分析&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="camera_management" value="摄像头管理&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;设备监控&lt;br/&gt;视频流&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="history_records" value="历史记录&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;记录查询&lt;br/&gt;数据导出&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="model_service" value="模型调用&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;在线检测&lt;br/&gt;结果展示&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="vue_tech" value="Vue 3 + TypeScript&lt;br/&gt;Ant Design Vue + ECharts&lt;br/&gt;运行在: http://localhost:90" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="850" y="120" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 后端服务层 -->
+        <mxCell id="backend_layer" value="后端服务层 (Backend Services)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontStyle=1;align=center;verticalAlign=top;spacing=10;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="240" width="1080" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- 后端模块 -->
+        <mxCell id="camera_service" value="摄像头服务&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;设备管理&lt;br/&gt;状态控制&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="record_service" value="记录服务&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;数据CRUD&lt;br/&gt;业务逻辑&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="analytics_service" value="分析服务&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;统计计算&lt;br/&gt;图表数据&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="system_service" value="系统服务&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;认证授权&lt;br/&gt;配置管理&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="file_service" value="文件服务&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;图片处理&lt;br/&gt;文件上传&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="springboot_tech" value="Spring Boot 2.7&lt;br/&gt;MyBatis + MySQL&lt;br/&gt;运行在: http://localhost:8080" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="850" y="280" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 硬件服务层 -->
+        <mxCell id="hardware_layer" value="硬件服务层 (Hardware Services - RDK X5)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=16;fontStyle=1;align=center;verticalAlign=top;spacing=10;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="400" width="1080" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- 硬件服务模块 -->
+        <mxCell id="camera_stream" value="视频流服务&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;设备检测&lt;br/&gt;流媒体传输&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ai_inference" value="AI推理服务&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;YOLOv8模型&lt;br/&gt;违停检测&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="device_manager" value="设备管理服务&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;USB检测&lt;br/&gt;状态监控&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="data_sender" value="数据传输服务&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;结果推送&lt;br/&gt;图片上传&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="hardware_info" value="硬件设备&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;C70 USB摄像头&lt;br/&gt;RDK X5开发板&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="python_tech" value="Python 3.8 + Flask&lt;br/&gt;OpenCV + YOLOv8&lt;br/&gt;运行在: http://192.168.x.x:5050" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="850" y="440" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 数据存储层 -->
+        <mxCell id="storage_layer" value="数据存储层 (Data Storage)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1;align=center;verticalAlign=top;spacing=10;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="560" width="1080" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- 存储模块 -->
+        <mxCell id="mysql_db" value="MySQL 数据库&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;违停记录&lt;br/&gt;设备信息&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="590" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="file_storage" value="文件存储&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;检测图片&lt;br/&gt;系统日志&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="590" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="config_storage" value="配置文件&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;系统配置&lt;br/&gt;模型参数&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="590" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="storage_tech" value="本地存储 + 网络共享&lt;br/&gt;MySQL 8.0&lt;br/&gt;运行在: localhost:3306" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="850" y="590" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 连接线 -->
+        
+        <!-- 前端到后端 -->
+        <mxCell id="frontend_to_backend1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#007AFF;flowAnimation=1;" edge="1" parent="1" source="data_analysis" target="analytics_service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="frontend_to_backend2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#007AFF;flowAnimation=1;" edge="1" parent="1" source="camera_management" target="camera_service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="frontend_to_backend3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#007AFF;flowAnimation=1;" edge="1" parent="1" source="history_records" target="record_service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 后端到硬件服务 -->
+        <mxCell id="backend_to_hardware1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#FF9500;flowAnimation=1;" edge="1" parent="1" source="camera_service" target="camera_stream">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 硬件服务内部连接 -->
+        <mxCell id="hardware_internal1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#FF3B30;flowAnimation=1;" edge="1" parent="1" source="camera_stream" target="ai_inference">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="hardware_internal2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#FF3B30;flowAnimation=1;" edge="1" parent="1" source="ai_inference" target="device_manager">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="hardware_internal3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#FF3B30;flowAnimation=1;" edge="1" parent="1" source="device_manager" target="data_sender">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 硬件到后端 -->
+        <mxCell id="hardware_to_backend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#8E44AD;flowAnimation=1;" edge="1" parent="1" source="data_sender" target="file_service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 后端到数据存储 -->
+        <mxCell id="backend_to_storage1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;strokeColor=#34C759;flowAnimation=1;" edge="1" parent="1" source="record_service" target="mysql_db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="backend_to_storage2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;strokeColor=#34C759;flowAnimation=1;" edge="1" parent="1" source="file_service" target="file_storage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 数据流标签 -->
+        <mxCell id="data_flow_label1" value="HTTP API调用" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#007AFF;" vertex="1" parent="1">
+          <mxGeometry x="300" y="210" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="data_flow_label2" value="设备控制" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#FF9500;" vertex="1" parent="1">
+          <mxGeometry x="120" y="370" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="data_flow_label3" value="视频流处理" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#FF3B30;" vertex="1" parent="1">
+          <mxGeometry x="180" y="460" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="data_flow_label4" value="检测结果上传" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#8E44AD;" vertex="1" parent="1">
+          <mxGeometry x="600" y="370" width="80" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="data_flow_label5" value="数据存储" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#34C759;" vertex="1" parent="1">
+          <mxGeometry x="300" y="530" width="60" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- 局域网说明 -->
+        <mxCell id="network_info" value="局域网环境 (192.168.x.x)&lt;br/&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;前端 ←→ 后端 ←→ RDK X5&lt;br/&gt;内网直连，无需云服务器&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;fontSize=12;fontStyle=2;align=center;" vertex="1" parent="1">
+          <mxGeometry x="500" y="680" width="200" height="60" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

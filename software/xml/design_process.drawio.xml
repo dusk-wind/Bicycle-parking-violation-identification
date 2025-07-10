@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="27.2.0">
+  <diagram name="设计流程图" id="4QtAq9-LaMBc9RbKk5SK">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 第一阶段：需求分析 -->
+        <mxCell id="phase1_container" value="" style="verticalLabelPosition=top;verticalAlign=bottom;html=1;shape=mxgraph.basic.rect;fillColor2=none;strokeWidth=2;size=20;indent=5;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=20;" vertex="1" parent="1">
+          <mxGeometry x="50" y="150" width="180" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="phase1_title" value="第一阶段：需求分析" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1f497d;" vertex="1" parent="1">
+          <mxGeometry x="50" y="120" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="req_analysis" value="校园违停现状调研" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="70" y="170" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="user_needs" value="用户需求分析" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="70" y="230" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tech_feasibility" value="技术可行性研究" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="70" y="290" width="140" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 第二阶段：架构设计 -->
+        <mxCell id="phase2_container" value="" style="verticalLabelPosition=top;verticalAlign=bottom;html=1;shape=mxgraph.basic.rect;fillColor2=none;strokeWidth=2;size=20;indent=5;fillColor=#d5e8d4;strokeColor=#82b366;opacity=20;" vertex="1" parent="1">
+          <mxGeometry x="280" y="150" width="180" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="phase2_title" value="第二阶段：架构设计" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#2d5016;" vertex="1" parent="1">
+          <mxGeometry x="280" y="120" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="system_arch" value="系统总体架构" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="300" y="170" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_computing" value="边缘计算方案" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="300" y="230" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="data_flow" value="数据流向设计" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="300" y="290" width="140" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 第三阶段：算法开发 -->
+        <mxCell id="phase3_container" value="" style="verticalLabelPosition=top;verticalAlign=bottom;html=1;shape=mxgraph.basic.rect;fillColor2=none;strokeWidth=2;size=20;indent=5;fillColor=#ffe6cc;strokeColor=#d79b00;opacity=20;" vertex="1" parent="1">
+          <mxGeometry x="510" y="150" width="180" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="phase3_title" value="第三阶段：算法开发" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="510" y="120" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="data_collection" value="数据收集标注" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="530" y="170" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="model_training" value="YOLOv8模型训练" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="530" y="230" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="model_optimization" value="模型量化优化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="530" y="290" width="140" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 第四阶段：系统实现 -->
+        <mxCell id="phase4_container" value="" style="verticalLabelPosition=top;verticalAlign=bottom;html=1;shape=mxgraph.basic.rect;fillColor2=none;strokeWidth=2;size=20;indent=5;fillColor=#f8cecc;strokeColor=#b85450;opacity=20;" vertex="1" parent="1">
+          <mxGeometry x="740" y="150" width="180" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="phase4_title" value="第四阶段：系统实现" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="740" y="120" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="backend_dev" value="后端API开发" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="760" y="170" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend_dev" value="前端界面开发" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="760" y="230" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_deployment" value="边缘端部署" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="760" y="290" width="140" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 第五阶段：测试优化 -->
+        <mxCell id="phase5_container" value="" style="verticalLabelPosition=top;verticalAlign=bottom;html=1;shape=mxgraph.basic.rect;fillColor2=none;strokeWidth=2;size=20;indent=5;fillColor=#e1d5e7;strokeColor=#9673a6;opacity=20;" vertex="1" parent="1">
+          <mxGeometry x="970" y="150" width="180" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="phase5_title" value="第五阶段：测试优化" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#5a4585;" vertex="1" parent="1">
+          <mxGeometry x="970" y="120" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="integration_test" value="集成功能测试" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="990" y="170" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="performance_test" value="性能压力测试" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="990" y="230" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="system_optimization" value="系统调优部署" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;shadow=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="990" y="290" width="140" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 横向箭头连接 -->
+        <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="phase1_container" target="phase2_container">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1" source="phase2_container" target="phase3_container">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="1" source="phase3_container" target="phase4_container">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="phase4_container" target="phase5_container">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 总体标题 -->
+        <mxCell id="main_title" value="自行车违停智能检测系统设计流程" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="500" y="50" width="400" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 流程说明 -->
+        <mxCell id="process_note" value="采用敏捷开发模式，各阶段可并行推进，持续迭代优化" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#666666;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="450" y="400" width="300" height="30" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

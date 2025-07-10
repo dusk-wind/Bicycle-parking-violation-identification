@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="27.2.0">
+  <diagram name="RDK X5硬件架构图" id="rdk_x5_hardware_architecture">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 系统标题 -->
+        <mxCell id="title" value="智能自行车违停检测系统 - RDK X5硬件架构" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1d1d1f;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="600" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- RDK X5主控板 -->
+        <mxCell id="rdk_x5_main" value="地平线RDK X5开发板&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;主控平台&lt;br/&gt;Ubuntu 22.04&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="80" width="300" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- 处理器模块 -->
+        <mxCell id="cpu_module" value="8核ARM Cortex-A55&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;系统调度&lt;br/&gt;任务管理&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="220" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- BPU AI加速器 -->
+        <mxCell id="bpu_accelerator" value="BPU AI加速器&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;10TOPS算力&lt;br/&gt;深度学习推理&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="220" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- GPU模块 -->
+        <mxCell id="gpu_module" value="GPU图形处理器&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;32Gflops&lt;br/&gt;图形处理支持&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;shadow=1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="220" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 摄像头模块 -->
+        <mxCell id="camera_module" value="USB摄像头&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;UVC协议&lt;br/&gt;1280×720@30fps&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;shadow=1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="400" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 网络接口 -->
+        <mxCell id="network_interface" value="网络连接&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;千兆以太网&lt;br/&gt;Wi-Fi 6 + BT 5.4&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;shadow=1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="400" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 存储模块 -->
+        <mxCell id="storage_module" value="存储扩展&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Micro SD卡&lt;br/&gt;外部存储&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="400" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 电源模块 -->
+        <mxCell id="power_module" value="电源系统&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;5V/5A输入&lt;br/&gt;PoE供电支持&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f7;strokeColor=#d6d6d6;shadow=1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="400" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- USB接口 -->
+        <mxCell id="usb_interface" value="USB 3.0接口&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;4个接口&lt;br/&gt;高速数据传输&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="400" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 性能指标 -->
+        <mxCell id="performance_metrics" value="性能指标&lt;br/&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;推理延迟: 3.67ms&lt;br/&gt;处理帧率: 272.53 FPS&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="520" width="300" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 连接线 -->
+        <!-- 主控板到处理器 -->
+        <mxCell id="flow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=1;dashed=1;flowAnimation=1;strokeColor=#007bff;" edge="1" parent="1" source="rdk_x5_main" target="cpu_module">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 主控板到BPU -->
+        <mxCell id="flow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=1;dashed=1;flowAnimation=1;strokeColor=#007bff;" edge="1" parent="1" source="rdk_x5_main" target="bpu_accelerator">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 主控板到GPU -->
+        <mxCell id="flow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=1;dashed=1;flowAnimation=1;strokeColor=#007bff;" edge="1" parent="1" source="rdk_x5_main" target="gpu_module">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 摄像头到主控板 -->
+        <mxCell id="flow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=1;dashed=1;flowAnimation=1;strokeColor=#28a745;" edge="1" parent="1" source="camera_module" target="rdk_x5_main">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 网络到主控板 -->
+        <mxCell id="flow5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=1;dashed=1;flowAnimation=1;strokeColor=#28a745;" edge="1" parent="1" source="network_interface" target="rdk_x5_main">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 存储到主控板 -->
+        <mxCell id="flow6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=1;dashed=1;flowAnimation=1;strokeColor=#28a745;" edge="1" parent="1" source="storage_module" target="rdk_x5_main">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 电源到主控板 -->
+        <mxCell id="flow7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=1;dashed=1;flowAnimation=1;strokeColor=#28a745;" edge="1" parent="1" source="power_module" target="rdk_x5_main">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- USB到主控板 -->
+        <mxCell id="flow8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=1;dashed=1;flowAnimation=1;strokeColor=#28a745;" edge="1" parent="1" source="usb_interface" target="rdk_x5_main">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 性能指标连接 -->
+        <mxCell id="flow9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=1;dashed=1;flowAnimation=1;strokeColor=#dc3545;" edge="1" parent="1" source="rdk_x5_main" target="performance_metrics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 标签说明 -->
+        <mxCell id="label1" value="系统调度" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#007bff;" vertex="1" connectable="0" parent="flow1">
+          <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
+            <mxPoint x="20" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="label2" value="AI推理" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#007bff;" vertex="1" connectable="0" parent="flow2">
+          <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
+            <mxPoint x="20" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="label3" value="图形处理" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#007bff;" vertex="1" connectable="0" parent="flow3">
+          <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
+            <mxPoint x="20" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="label4" value="视频输入" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#28a745;" vertex="1" connectable="0" parent="flow4">
+          <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
+            <mxPoint x="15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="label5" value="网络通信" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#28a745;" vertex="1" connectable="0" parent="flow5">
+          <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
+            <mxPoint x="15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="label6" value="数据存储" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#28a745;" vertex="1" connectable="0" parent="flow6">
+          <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
+            <mxPoint x="15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="label7" value="电源供应" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#28a745;" vertex="1" connectable="0" parent="flow7">
+          <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
+            <mxPoint x="15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="label8" value="USB连接" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#28a745;" vertex="1" connectable="0" parent="flow8">
+          <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
+            <mxPoint x="15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="label9" value="性能输出" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#dc3545;" vertex="1" connectable="0" parent="flow9">
+          <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
+            <mxPoint x="20" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

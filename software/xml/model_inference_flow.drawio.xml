@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="27.2.0">
+  <diagram name="模型推理数据流">
+    <mxGraphModel dx="1800" dy="400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2048" pageHeight="402" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- 输入图片 -->
+        <mxCell id="images" value="images&#10;1x640x640x3 / 2, NV12, UINT8" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="40" as="geometry"/>
+        </mxCell>
+        <!-- NV12TOYUV444 -->
+        <mxCell id="nv12" value="name: NV12TOYUV444&#10;type: BPU&#10;1x640x640x3, YUV444, NHWC, INT8" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b7d6ec;strokeColor=#4a708b;" vertex="1" parent="1">
+          <mxGeometry x="200" y="30" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <!-- main_graph_subgraph_0 -->
+        <mxCell id="main_graph" value="name: main_graph_subgraph_0&#10;type: BPU" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b7d6ec;strokeColor=#4a708b;" vertex="1" parent="1">
+          <mxGeometry x="440" y="30" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <!-- output0_HzDequantize -->
+        <mxCell id="deq0" value="name: output0_HzDequantize&#10;type: Dequantize&#10;1x80x80x1, FLOAT32," style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="700" y="0" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="deq326" value="name: model.22cv2.0cv2.0.2Conv_output_0_HzDequantize&#10;type: Dequantize&#10;1x80x80x64, FLOAT32," style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="700" y="70" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="deq334" value="name: 334_HzDequantize&#10;type: Dequantize&#10;1x40x40x1, FLOAT32," style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="950" y="-40" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="deq342" value="name: model.22cv2.1cv2.1.2Conv_output_0_HzDequantize&#10;type: Dequantize&#10;1x40x40x64, FLOAT32," style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="950" y="30" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="deq350" value="name: 350_HzDequantize&#10;type: Dequantize&#10;1x20x20x1, FLOAT32," style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="-40" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="deq358" value="name: model.22cv2.2cv2.2.2Conv_output_0_HzDequantize&#10;type: Dequantize&#10;1x20x20x64, FLOAT32," style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cccccc;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="30" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <!-- output ovals -->
+        <mxCell id="output0" value="output0" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="950" y="0" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="output326" value="326" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="950" y="70" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="output334" value="334" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="-10" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="output342" value="342" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="60" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="output350" value="350" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="-10" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="output358" value="358" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="60" width="60" height="30" as="geometry"/>
+        </mxCell>
+        <!-- 连线 -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#d62728;" edge="1" parent="1" source="images" target="nv12">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#d62728;" edge="1" parent="1" source="nv12" target="main_graph">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#d62728;" edge="1" parent="1" source="main_graph" target="deq0">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#d62728;" edge="1" parent="1" source="main_graph" target="deq326">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#d62728;" edge="1" parent="1" source="main_graph" target="deq334">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#d62728;" edge="1" parent="1" source="main_graph" target="deq342">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#d62728;" edge="1" parent="1" source="main_graph" target="deq350">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#d62728;" edge="1" parent="1" source="main_graph" target="deq358">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#d62728;" edge="1" parent="1" source="deq0" target="output0">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#d62728;" edge="1" parent="1" source="deq326" target="output326">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#d62728;" edge="1" parent="1" source="deq334" target="output334">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#d62728;" edge="1" parent="1" source="deq342" target="output342">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#d62728;" edge="1" parent="1" source="deq350" target="output350">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#d62728;" edge="1" parent="1" source="deq358" target="output358">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

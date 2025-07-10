@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lihua.demo.Camera.mapper.CameraMapper">
+
+    <!-- 基础结果映射 -->
+    <resultMap id="BaseResultMap" type="com.lihua.demo.Camera.entity.Camera">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="serial" property="serial" jdbcType="VARCHAR"/>
+        <result column="interface_type" property="interfaceType" jdbcType="VARCHAR"/>
+        <result column="connected" property="connected" jdbcType="BOOLEAN"/>
+        <result column="last_updated" property="lastUpdated" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!-- 查询所有摄像头 -->
+    <select id="selectAll" resultMap="BaseResultMap">
+        SELECT id, serial, interface_type, connected, last_updated
+        FROM camera
+        ORDER BY last_updated DESC
+    </select>
+
+    <!-- 根据ID查询摄像头 -->
+    <select id="selectById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        SELECT id, serial, interface_type, connected, last_updated
+        FROM camera
+        WHERE id = #{id}
+    </select>
+
+    <!-- 统计总摄像头数 -->
+    <select id="countTotal" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM camera
+    </select>
+
+    <!-- 按连接状态统计摄像头数 -->
+    <select id="countByConnected" parameterType="java.lang.Boolean" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM camera WHERE connected = #{connected}
+    </select>
+
+    <!-- 更新摄像头连接状态 -->
+    <update id="updateConnectedStatus">
+        UPDATE camera 
+        SET connected = #{connected}, last_updated = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <!-- 插入摄像头 -->
+    <insert id="insert" parameterType="com.lihua.demo.Camera.entity.Camera" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO camera (serial, interface_type, connected, last_updated)
+        VALUES (#{serial}, #{interfaceType}, #{connected}, NOW())
+    </insert>
+
+    <!-- 更新摄像头信息 -->
+    <update id="update" parameterType="com.lihua.demo.Camera.entity.Camera">
+        UPDATE camera
+        SET serial = #{serial},
+            interface_type = #{interfaceType},
+            connected = #{connected},
+            last_updated = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除摄像头 -->
+    <delete id="deleteById" parameterType="java.lang.Long">
+        DELETE FROM camera WHERE id = #{id}
+    </delete>
+
+</mapper>

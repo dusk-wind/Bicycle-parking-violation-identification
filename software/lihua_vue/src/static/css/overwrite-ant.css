@@ -1,0 +1,47 @@
+/**
+    modal/drawer 背景毛玻璃效果
+ */
+[data-ground-glass = glass] {
+    /* 抽屉背景虚化 */
+    .ant-drawer-mask {
+        will-change: backdrop-filter;
+        backdrop-filter: saturate(180%) blur(6px) !important;
+        -webkit-backdrop-filter: saturate(180%) blur(6px) !important;
+    }
+    /* 模态框背景虚化 */
+    .ant-modal-wrap {
+        will-change: backdrop-filter;
+        backdrop-filter: saturate(180%) blur(6px) !important;
+        -webkit-backdrop-filter: saturate(180%) blur(6px) !important;
+    }
+    /* 选项卡选中项目虚化 */
+    .ant-tabs-tab-active {
+        background: rgba(255, 255, 255, 0) !important;
+        border-bottom-color: rgba(255, 255, 255, 0) !important;
+    }
+}
+
+/**
+    table 页脚背景设置为白色
+ */
+[data-theme = 'light'] {
+    .ant-table-footer {
+        background: #FFFFFF !important;
+    }
+}
+[data-theme = 'dark'] {
+    .ant-table-footer {
+        background: #141414 !important;
+    }
+}
+
+.ant-table-wrapper .ant-table {
+    border-radius: 8px !important;
+}
+
+/**
+    侧边风格2导航添加阴影效果
+ */
+.ant-layout-sider-trigger {
+    box-shadow: 0 1px 4px rgba(0,21,41,.12);
+}

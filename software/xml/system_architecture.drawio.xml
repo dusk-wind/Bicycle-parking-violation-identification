@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="27.2.0">
+  <diagram name="智能自行车违停检测系统架构" id="4QtAq9-LaMBc9RbKk5SK">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 边缘端标题 -->
+        <mxCell id="edge-title" value="边缘计算端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=1;fontSize=16;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="50" y="30" width="600" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 第1层：硬件感知层 -->
+        <mxCell id="hardware-layer" value="第1层：硬件感知层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#4d79a4;shadow=1;fontSize=14;fontStyle=1;fontColor=#1d3557;" vertex="1" parent="1">
+          <mxGeometry x="50" y="90" width="600" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="rdk-board" value="RDK X5开发板&lt;br&gt;&lt;b&gt;8核ARM Cortex-A55&lt;/b&gt;&lt;br&gt;&lt;b&gt;10TOPS BPU AI算力&lt;/b&gt;&lt;br&gt;Ubuntu 22.04系统" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="160" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cameras" value="USB摄像头阵列&lt;br&gt;&lt;b&gt;最多4路同时接入&lt;/b&gt;&lt;br&gt;&lt;b&gt;1080P@30FPS&lt;/b&gt;&lt;br&gt;实时视频流采集" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="270" y="120" width="160" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="storage" value="本地存储系统&lt;br&gt;&lt;b&gt;eMMC + TF卡&lt;/b&gt;&lt;br&gt;&lt;b&gt;缓存管理&lt;/b&gt;&lt;br&gt;临时数据存储" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="460" y="120" width="160" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 第2层：AI推理层 -->
+        <mxCell id="ai-layer" value="第2层：AI推理层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff0f0;strokeColor=#d79b00;shadow=1;fontSize=14;fontStyle=1;fontColor=#8b4513;" vertex="1" parent="1">
+          <mxGeometry x="50" y="240" width="600" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ai-inference" value="AI推理引擎&lt;br&gt;&lt;b&gt;YOLOv8s模型&lt;/b&gt;&lt;br&gt;&lt;b&gt;3.67ms延迟&lt;/b&gt;&lt;br&gt;BPU硬件加速" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="270" width="130" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="detection" value="目标检测&lt;br&gt;&lt;b&gt;自行车识别&lt;/b&gt;&lt;br&gt;&lt;b&gt;mAP@0.5=0.892&lt;/b&gt;&lt;br&gt;实时检测" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="230" y="270" width="130" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="violation-judge" value="违规判定算法&lt;br&gt;&lt;b&gt;规则引擎&lt;/b&gt;&lt;br&gt;&lt;b&gt;智能决策&lt;/b&gt;&lt;br&gt;证据生成" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="380" y="270" width="130" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="performance" value="性能监控&lt;br&gt;&lt;b&gt;272.53 FPS&lt;/b&gt;&lt;br&gt;&lt;b&gt;8.90MB/帧&lt;/b&gt;&lt;br&gt;资源管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="530" y="270" width="130" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 第3层：数据上传层 -->
+        <mxCell id="upload-layer" value="第3层：数据上传层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f8ff;strokeColor=#82b366;shadow=1;fontSize=14;fontStyle=1;fontColor=#2d5a27;" vertex="1" parent="1">
+          <mxGeometry x="50" y="390" width="600" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="data-process" value="数据预处理&lt;br&gt;&lt;b&gt;格式转换&lt;/b&gt;&lt;br&gt;&lt;b&gt;压缩优化&lt;/b&gt;&lt;br&gt;批量打包" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="420" width="130" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="network-comm" value="网络通信模块&lt;br&gt;&lt;b&gt;4G/5G/WiFi&lt;/b&gt;&lt;br&gt;&lt;b&gt;多网切换&lt;/b&gt;&lt;br&gt;断线重连" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="230" y="420" width="130" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="upload-manage" value="上传管理器&lt;br&gt;&lt;b&gt;队列调度&lt;/b&gt;&lt;br&gt;&lt;b&gt;失败重试&lt;/b&gt;&lt;br&gt;流量控制" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="380" y="420" width="130" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="security" value="安全认证&lt;br&gt;&lt;b&gt;SSL/TLS加密&lt;/b&gt;&lt;br&gt;&lt;b&gt;Token验证&lt;/b&gt;&lt;br&gt;数据加密" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="530" y="420" width="130" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 云端标题 -->
+        <mxCell id="cloud-title" value="云端服务器" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;shadow=1;fontSize=16;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="750" y="30" width="600" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 第4层：云端服务层 -->
+        <mxCell id="cloud-service-layer" value="第4层：云端服务层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2e6;strokeColor=#d6b656;shadow=1;fontSize=14;fontStyle=1;fontColor=#bf8f00;" vertex="1" parent="1">
+          <mxGeometry x="750" y="90" width="600" height="200" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="gateway" value="API网关&lt;br&gt;&lt;b&gt;负载均衡&lt;/b&gt;&lt;br&gt;&lt;b&gt;请求路由&lt;/b&gt;&lt;br&gt;流量监控" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="780" y="120" width="130" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="spring-boot" value="Spring Boot后端&lt;br&gt;&lt;b&gt;微服务架构&lt;/b&gt;&lt;br&gt;&lt;b&gt;REST API&lt;/b&gt;&lt;br&gt;业务逻辑处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="930" y="120" width="130" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="data-service" value="数据服务层&lt;br&gt;&lt;b&gt;违规记录管理&lt;/b&gt;&lt;br&gt;&lt;b&gt;图像存储服务&lt;/b&gt;&lt;br&gt;批量处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="120" width="130" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="user-service" value="用户权限服务&lt;br&gt;&lt;b&gt;身份认证&lt;/b&gt;&lt;br&gt;&lt;b&gt;角色管理&lt;/b&gt;&lt;br&gt;权限控制" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="780" y="210" width="130" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="report-service" value="统计分析服务&lt;br&gt;&lt;b&gt;Excel导出&lt;/b&gt;&lt;br&gt;&lt;b&gt;数据挖掘&lt;/b&gt;&lt;br&gt;报表生成" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="930" y="210" width="130" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="notify-service" value="消息推送服务&lt;br&gt;&lt;b&gt;实时通知&lt;/b&gt;&lt;br&gt;&lt;b&gt;WebSocket&lt;/b&gt;&lt;br&gt;事件驱动" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="210" width="130" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 第5层：数据存储层 -->
+        <mxCell id="storage-layer" value="第5层：数据存储层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f8;strokeColor=#9673a6;shadow=1;fontSize=14;fontStyle=1;fontColor=#5a4b8c;" vertex="1" parent="1">
+          <mxGeometry x="750" y="320" width="600" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="mysql" value="MySQL主数据库&lt;br&gt;&lt;b&gt;违规记录存储&lt;/b&gt;&lt;br&gt;&lt;b&gt;用户信息管理&lt;/b&gt;&lt;br&gt;事务处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="780" y="350" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="redis" value="Redis缓存&lt;br&gt;&lt;b&gt;会话存储&lt;/b&gt;&lt;br&gt;&lt;b&gt;热点数据&lt;/b&gt;&lt;br&gt;实时计算" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="940" y="350" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="oss" value="对象存储OSS&lt;br&gt;&lt;b&gt;图像文件存储&lt;/b&gt;&lt;br&gt;&lt;b&gt;CDN加速&lt;/b&gt;&lt;br&gt;海量数据" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="350" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 第6层：前端展示层 -->
+        <mxCell id="frontend-layer" value="第6层：前端展示层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#82b366;shadow=1;fontSize=14;fontStyle=1;fontColor=#2d5a27;" vertex="1" parent="1">
+          <mxGeometry x="750" y="470" width="600" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="vue3" value="Vue 3管理界面&lt;br&gt;&lt;b&gt;响应式设计&lt;/b&gt;&lt;br&gt;&lt;b&gt;TypeScript&lt;/b&gt;&lt;br&gt;组件化开发" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="780" y="500" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="real-time" value="实时监控面板&lt;br&gt;&lt;b&gt;违规实况&lt;/b&gt;&lt;br&gt;&lt;b&gt;设备状态&lt;/b&gt;&lt;br&gt;告警通知" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="940" y="500" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="data-viz" value="数据可视化&lt;br&gt;&lt;b&gt;图表展示&lt;/b&gt;&lt;br&gt;&lt;b&gt;趋势分析&lt;/b&gt;&lt;br&gt;多维报表" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="500" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 系统性能指标展示 -->
+        <mxCell id="performance-metrics" value="系统性能指标&lt;br&gt;&lt;b&gt;接口响应: 0.0092s&lt;/b&gt;&lt;br&gt;&lt;b&gt;系统吞吐: 33.8次/s&lt;/b&gt;&lt;br&gt;&lt;b&gt;并发支持: 100用户&lt;/b&gt;&lt;br&gt;&lt;b&gt;异常率: 0%&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffeaa7;strokeColor=#fdcb6e;shadow=1;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="650" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ai-metrics" value="AI模型性能&lt;br&gt;&lt;b&gt;推理延迟: 3.67ms&lt;/b&gt;&lt;br&gt;&lt;b&gt;处理帧率: 272.53 FPS&lt;/b&gt;&lt;br&gt;&lt;b&gt;内存占用: 8.90MB/帧&lt;/b&gt;&lt;br&gt;&lt;b&gt;检测精度: mAP@0.5=0.892&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fab1a0;strokeColor=#e17055;shadow=1;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="650" width="200" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- 主要数据流箭头 -->
+        <mxCell id="flow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=1;strokeWidth=3;strokeColor=#0984e3;" edge="1" parent="1" source="cameras" target="ai-inference">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow1-label" value="视频流" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1;fillColor=#dfe6e9;strokeColor=none;" vertex="1" connectable="0" parent="flow1">
+          <mxGeometry x="-0.1" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="flow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=1;strokeWidth=2;strokeColor=#00b894;" edge="1" parent="1" source="ai-inference" target="detection">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=1;strokeWidth=2;strokeColor=#00b894;" edge="1" parent="1" source="detection" target="violation-judge">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=1;strokeWidth=3;strokeColor=#e17055;" edge="1" parent="1" source="violation-judge" target="data-process">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow4-label" value="违规数据" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1;fillColor=#ffeaa7;strokeColor=none;" vertex="1" connectable="0" parent="flow4">
+          <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="flow5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=1;strokeWidth=2;strokeColor=#fd79a8;" edge="1" parent="1" source="upload-manage" target="gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow5-label" value="HTTPS上传" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1;fillColor=#fd79a8;strokeColor=none;fontColor=white;" vertex="1" connectable="0" parent="flow5">
+          <mxGeometry x="0.1" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="flow6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=1;strokeWidth=2;strokeColor=#fdcb6e;" edge="1" parent="1" source="gateway" target="spring-boot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=1;strokeWidth=2;strokeColor=#a29bfe;" edge="1" parent="1" source="spring-boot" target="mysql">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shadow=1;strokeWidth=2;strokeColor=#6c5ce7;" edge="1" parent="1" source="spring-boot" target="vue3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow8-label" value="API接口" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1;fillColor=#a29bfe;strokeColor=none;fontColor=white;" vertex="1" connectable="0" parent="flow8">
+          <mxGeometry x="0.1" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

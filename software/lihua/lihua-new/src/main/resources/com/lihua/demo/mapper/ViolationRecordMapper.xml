@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lihua.demo.Violation.mapper.ViolationRecordMapper">
+
+    <!-- 基础结果映射 -->
+    <resultMap id="BaseResultMap" type="com.lihua.demo.Violation.entity.ViolationRecord">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="camera_id" property="cameraId" jdbcType="BIGINT"/>
+        <result column="image_path" property="imagePath" jdbcType="VARCHAR"/>
+        <result column="upload_time" property="uploadTime" jdbcType="TIMESTAMP"/>
+        <result column="confidence" property="confidence" jdbcType="DECIMAL"/>
+        <result column="location" property="location" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!-- 分页查询违停记录列表 -->
+    <select id="selectPage" parameterType="com.lihua.demo.Violation.dto.ViolationQueryParams" resultMap="BaseResultMap">
+        SELECT id, camera_id, image_path, upload_time, confidence, location
+        FROM violation_record
+        <where>
+            <if test="location != null and location != ''">
+                AND location LIKE CONCAT('%', #{location}, '%')
+            </if>
+            <if test="startDate != null and startDate != ''">
+                AND DATE(upload_time) &gt;= #{startDate}
+            </if>
+            <if test="endDate != null and endDate != ''">
+                AND DATE(upload_time) &lt;= #{endDate}
+            </if>
+            <if test="cameraId != null">
+                AND camera_id = #{cameraId}
+            </if>
+        </where>
+        ORDER BY upload_time DESC
+        LIMIT #{pageSize} OFFSET #{pageNum}
+    </select>
+
+    <!-- 统计总记录数（带条件） -->
+    <select id="countTotal" parameterType="com.lihua.demo.Violation.dto.ViolationQueryParams" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM violation_record
+        <where>
+            <if test="location != null and location != ''">
+                AND location LIKE CONCAT('%', #{location}, '%')
+            </if>
+            <if test="startDate != null and startDate != ''">
+                AND DATE(upload_time) &gt;= #{startDate}
+            </if>
+            <if test="endDate != null and endDate != ''">
+                AND DATE(upload_time) &lt;= #{endDate}
+            </if>
+            <if test="cameraId != null">
+                AND camera_id = #{cameraId}
+            </if>
+        </where>
+    </select>
+
+    <!-- 根据ID查询违停记录 -->
+    <select id="selectById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        SELECT id, camera_id, image_path, upload_time, confidence, location
+        FROM violation_record
+        WHERE id = #{id}
+    </select>
+
+    <!-- 插入违停记录 -->
+    <insert id="insert" parameterType="com.lihua.demo.Violation.entity.ViolationRecord" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO violation_record (camera_id, image_path, upload_time, confidence, location)
+        VALUES (#{cameraId}, #{imagePath}, #{uploadTime}, #{confidence}, #{location})
+    </insert>
+
+    <!-- 更新违停记录 -->
+    <update id="update" parameterType="com.lihua.demo.Violation.entity.ViolationRecord">
+        UPDATE violation_record
+        SET camera_id = #{cameraId},
+            image_path = #{imagePath},
+            upload_time = #{uploadTime},
+            confidence = #{confidence},
+            location = #{location}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除违停记录 -->
+    <delete id="deleteById" parameterType="java.lang.Long">
+        DELETE FROM violation_record WHERE id = #{id}
+    </delete>
+
+    <!-- 统计总记录数 -->
+    <select id="countAllRecords" resultType="java.lang.Long">
+        SELECT COUNT(*) FROM violation_record
+    </select>
+
+    <!-- 统计今日记录数 -->
+    <select id="countTodayRecords" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM violation_record
+        WHERE DATE(upload_time) = CURDATE()
+    </select>
+
+    <!-- 计算平均置信度 -->
+    <select id="getAverageConfidence" resultType="java.math.BigDecimal">
+        SELECT COALESCE(AVG(confidence), 0)
+        FROM violation_record
+        WHERE confidence IS NOT NULL
+    </select>
+
+    <!-- 获取最新记录 -->
+    <select id="selectLatestRecords" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        SELECT id, camera_id, image_path, upload_time, confidence, location
+        FROM violation_record
+        ORDER BY upload_time DESC
+        LIMIT #{limit}
+    </select>
+
+    <!-- 按周统计违规趋势 -->
+    <select id="selectWeeklyTrend" resultType="com.lihua.demo.dto.WeeklyTrendDto">
+        SELECT 
+            CONCAT('第', WEEK(MIN(upload_time), 1) - WEEK(DATE_SUB(MIN(upload_time), INTERVAL DAYOFMONTH(MIN(upload_time))-1 DAY), 1) + 1, '周') AS week,
+            COUNT(*) AS violationCount,
+            CONCAT(DATE_FORMAT(MIN(upload_time), '%Y-%m-%d'), ' ~ ', DATE_FORMAT(MAX(upload_time), '%Y-%m-%d')) AS dateRange
+        FROM violation_record
+        WHERE upload_time &gt;= DATE_SUB(CURDATE(), INTERVAL 18 WEEK)
+        GROUP BY YEARWEEK(upload_time, 1)
+        ORDER BY YEARWEEK(upload_time, 1)
+    </select>
+
+    <!-- 按类型统计违规分布（基于位置信息模拟类型） -->
+    <select id="selectTypeDistribution" resultType="map">
+        SELECT 
+            CASE 
+                WHEN location LIKE '%教学楼%' OR location LIKE '%图书馆%' THEN '非机动车乱停'
+                WHEN location LIKE '%食堂%' OR location LIKE '%宿舍%' THEN '机动车违停'
+                WHEN location LIKE '%消防%' THEN '占用消防通道'
+                WHEN location LIKE '%无障碍%' THEN '占用无障碍通道'
+                ELSE '其他违规'
+            END AS type,
+            COUNT(*) AS count
+        FROM violation_record
+        GROUP BY 
+            CASE 
+                WHEN location LIKE '%教学楼%' OR location LIKE '%图书馆%' THEN '非机动车乱停'
+                WHEN location LIKE '%食堂%' OR location LIKE '%宿舍%' THEN '机动车违停'
+                WHEN location LIKE '%消防%' THEN '占用消防通道'
+                WHEN location LIKE '%无障碍%' THEN '占用无障碍通道'
+                ELSE '其他违规'
+            END
+        ORDER BY count DESC
+    </select>
+
+    <!-- 按地点统计违规分布 -->
+    <select id="selectLocationDistribution" resultType="map">
+        SELECT location, COUNT(*) AS count
+        FROM violation_record
+        WHERE location IS NOT NULL AND location != ''
+        GROUP BY location
+        ORDER BY count DESC
+        LIMIT 10
+    </select>
+
+    <!-- 获取本周违规数量 -->
+    <select id="countThisWeekRecords" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM violation_record
+        WHERE YEARWEEK(upload_time, 1) = YEARWEEK(CURDATE(), 1)
+    </select>
+
+    <!-- 获取上周违规数量 -->
+    <select id="countLastWeekRecords" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM violation_record
+        WHERE YEARWEEK(upload_time, 1) = YEARWEEK(CURDATE(), 1) - 1
+    </select>
+
+    <!-- 获取本月违规数量 -->
+    <select id="countThisMonthRecords" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM violation_record
+        WHERE YEAR(upload_time) = YEAR(CURDATE()) AND MONTH(upload_time) = MONTH(CURDATE())
+    </select>
+
+    <!-- 获取上月违规数量 -->
+    <select id="countLastMonthRecords" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM violation_record
+        WHERE upload_time &gt;= DATE_SUB(DATE_SUB(CURDATE(), INTERVAL DAY(CURDATE())-1 DAY), INTERVAL 1 MONTH)
+        AND upload_time &lt; DATE_SUB(CURDATE(), INTERVAL DAY(CURDATE())-1 DAY)
+    </select>
+
+</mapper>

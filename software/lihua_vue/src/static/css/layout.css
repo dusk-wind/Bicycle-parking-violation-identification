@@ -1,0 +1,62 @@
+/** 开启view-tabs / 显示show-layout / 导航类型为顶部导航 */
+[view-tabs=show][show-hide-layout=show][layout-type='header-content'] .layout-content {
+    min-height: calc(100vh - (48px + 52px));
+}
+
+/** 隐藏view-tabs / 显示show-layout / 导航类型为顶部导航 */
+[view-tabs=hide][show-hide-layout=show][layout-type='header-content'] .layout-content {
+    min-height: calc(100vh - 48px);
+}
+
+[view-tabs=show][show-hide-layout=hide] .layout-content {
+    min-height: calc(100vh - (54px));
+}
+
+/* content 留出上左右 16像素空隙，下方14像素空袭，兼容iframe全屏不出现滚动条*/
+.layout-content {
+    padding: 16px 16px 14px 16px;
+    overflow-x: hidden;
+}
+
+/*顶栏右侧元素样式*/
+.header-right-item {
+    padding: 0 8px 0 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/** 顶部右侧鼠标悬停修改背景颜色 */
+[data-theme = 'light']{
+    .header-right:hover {
+        background: rgba(0, 0, 0, 0.06);
+    }
+}
+
+[data-theme = 'dark'] {
+    .header-right:hover {
+        background: rgba(255, 255, 255, 0.12);
+    }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+    z-index: 1;
+}
+
+::view-transition-new(root) {
+    z-index: 2147483646;
+}
+
+/* 根据自己选择器修改 */
+[data-theme="dark"]::view-transition-old(root) {
+    z-index: 2147483646;
+}
+[data-theme="dark"]::view-transition-new(root) {
+    z-index: 1;
+}

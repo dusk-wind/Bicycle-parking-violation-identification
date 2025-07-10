@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="27.2.0">
+  <diagram name="系统函数流程图" id="functions-flow-diagram">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 用户入口 -->
+        <mxCell id="start" value="用户访问系统" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="50" y="30" width="120" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- 前端路由层 -->
+        <mxCell id="router" value="Vue路由分发" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="20" width="120" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 五大功能模块 -->
+        <mxCell id="index-module" value="首页仪表盘&lt;br/&gt;&lt;b&gt;Index.vue&lt;/b&gt;&lt;br/&gt;统计展示" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="history-module" value="违规记录查询&lt;br/&gt;&lt;b&gt;History.vue&lt;/b&gt;&lt;br/&gt;数据管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="520" y="20" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="model-module" value="模型在线调用&lt;br/&gt;&lt;b&gt;Model.vue&lt;/b&gt;&lt;br/&gt;AI检测" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="640" y="20" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="camera-module" value="摄像头管理&lt;br/&gt;&lt;b&gt;Camera.vue&lt;/b&gt;&lt;br/&gt;设备控制" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="760" y="20" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="data-module" value="数据可视化&lt;br/&gt;&lt;b&gt;Data.vue&lt;/b&gt;&lt;br/&gt;图表分析" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="880" y="20" width="100" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- API接口层 -->
+        <mxCell id="api-layer" value="Spring Boot API接口层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="400" y="150" width="580" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 主要控制器 -->
+        <mxCell id="violation-controller" value="违停记录控制器&lt;br/&gt;&lt;b&gt;ViolationRecordController&lt;/b&gt;&lt;br/&gt;/api/history/*&lt;br/&gt;/api/violation/*" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="420" y="220" width="160" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="camera-controller" value="摄像头控制器&lt;br/&gt;&lt;b&gt;CameraController&lt;/b&gt;&lt;br/&gt;/api/camera/*" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="600" y="220" width="160" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="system-controller" value="系统管理控制器&lt;br/&gt;&lt;b&gt;系统原有控制器&lt;/b&gt;&lt;br/&gt;/system/*" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="780" y="220" width="160" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- AI推理服务层 -->
+        <mxCell id="ai-service-layer" value="AI推理服务层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="50" y="150" width="300" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- AI服务组件 -->
+        <mxCell id="edge-inference" value="边缘推理服务&lt;br/&gt;&lt;b&gt;RDK X5&lt;/b&gt;&lt;br/&gt;硬件BPU推理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="70" y="220" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="online-inference" value="在线检测服务&lt;br/&gt;&lt;b&gt;Flask API&lt;/b&gt;&lt;br/&gt;YOLO模型推理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="210" y="220" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 核心功能流程 -->
+        <!-- 违规记录查询流程 -->
+        <mxCell id="history-flow" value="违规记录查询流程" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f8ff;strokeColor=#4d79a4;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50" y="350" width="280" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="history-input" value="输入参数&lt;br/&gt;分页信息、查询条件&lt;br/&gt;时间范围、摄像头ID" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#4d79a4;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="70" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="history-process" value="处理过程&lt;br/&gt;数据库分页查询&lt;br/&gt;结果统计计算&lt;br/&gt;Excel导出生成" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#4d79a4;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="210" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="history-output" value="输出结果&lt;br/&gt;分页数据列表&lt;br/&gt;统计汇总信息&lt;br/&gt;导出文件" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#4d79a4;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="350" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- AI检测流程 -->
+        <mxCell id="ai-flow" value="AI检测处理流程" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#ff8f00;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="350" width="280" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ai-input" value="输入数据&lt;br/&gt;图像文件&lt;br/&gt;检测参数&lt;br/&gt;位置信息" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ff8f00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="520" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ai-process" value="处理流程&lt;br/&gt;图像预处理&lt;br/&gt;模型推理&lt;br/&gt;结果后处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ff8f00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="660" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ai-output" value="输出结果&lt;br/&gt;检测框坐标&lt;br/&gt;置信度分数&lt;br/&gt;标注图片" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ff8f00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="800" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 边缘推理详细流程 -->
+        <mxCell id="edge-flow" value="边缘推理详细流程" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#82b366;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="50" y="520" width="890" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- 图像预处理 -->
+        <mxCell id="preprocess" value="图像预处理&lt;br/&gt;&lt;b&gt;bgr2nv12()&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="570" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="preprocess-detail" value="输入: BGR图像&lt;br/&gt;处理: 缩放+格式转换&lt;br/&gt;输出: NV12张量" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#82b366;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="80" y="640" width="100" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- BPU推理 -->
+        <mxCell id="bpu-inference" value="BPU硬件推理&lt;br/&gt;&lt;b&gt;forward()&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="220" y="570" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="bpu-detail" value="输入: NV12张量&lt;br/&gt;处理: BPU加速推理&lt;br/&gt;输出: 6个特征图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#82b366;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="220" y="640" width="100" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 后处理 -->
+        <mxCell id="postprocess" value="结果后处理&lt;br/&gt;&lt;b&gt;postProcess()&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="360" y="570" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="postprocess-detail" value="输入: 原始特征图&lt;br/&gt;处理: NMS过滤&lt;br/&gt;输出: 检测结果" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#82b366;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="360" y="640" width="100" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 数据保存 -->
+        <mxCell id="data-save" value="数据存储&lt;br/&gt;&lt;b&gt;save_to_db()&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="500" y="570" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="data-detail" value="输入: 检测结果&lt;br/&gt;处理: 数据库写入&lt;br/&gt;输出: 记录ID" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#82b366;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="500" y="640" width="100" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 图片上传 -->
+        <mxCell id="image-upload" value="图片上传&lt;br/&gt;&lt;b&gt;upload_image()&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="640" y="570" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="upload-detail" value="输入: 检测图片&lt;br/&gt;处理: HTTP上传&lt;br/&gt;输出: 图片URL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#82b366;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="640" y="640" width="100" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 后端通知 -->
+        <mxCell id="backend-notify" value="后端通知&lt;br/&gt;&lt;b&gt;notify_backend()&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="780" y="570" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="notify-detail" value="输入: 违停事件&lt;br/&gt;处理: API调用&lt;br/&gt;输出: 推送通知" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#82b366;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="780" y="640" width="100" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 数据存储层 -->
+        <mxCell id="storage-layer" value="数据存储层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f8;strokeColor=#9673a6;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="50" y="750" width="890" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="mysql-db" value="MySQL数据库&lt;br/&gt;&lt;b&gt;violation_record表&lt;/b&gt;&lt;br/&gt;结构化数据存储" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="100" y="800" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="file-storage" value="文件存储系统&lt;br/&gt;&lt;b&gt;静态资源目录&lt;/b&gt;&lt;br/&gt;图片文件保存" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="300" y="800" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cache-system" value="Redis缓存&lt;br/&gt;&lt;b&gt;会话和状态&lt;/b&gt;&lt;br/&gt;高速数据访问" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="500" y="800" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接线 -->
+        <mxCell id="line1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#333333;" edge="1" parent="1" source="start" target="router">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="line2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#d6b656;" edge="1" parent="1" source="router" target="history-module">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="line3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#b85450;" edge="1" parent="1" source="history-module" target="violation-controller">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="line4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#d79b00;" edge="1" parent="1" source="model-module" target="online-inference">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="line5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#82b366;" edge="1" parent="1" source="history-input" target="history-process">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="line6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#82b366;" edge="1" parent="1" source="history-process" target="history-output">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="line7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#ff8f00;" edge="1" parent="1" source="ai-input" target="ai-process">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="line8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#ff8f00;" edge="1" parent="1" source="ai-process" target="ai-output">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="line9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#82b366;" edge="1" parent="1" source="preprocess" target="bpu-inference">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="line10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#82b366;" edge="1" parent="1" source="bpu-inference" target="postprocess">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="line11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#82b366;" edge="1" parent="1" source="postprocess" target="data-save">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="line12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#82b366;" edge="1" parent="1" source="data-save" target="image-upload">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="line13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#82b366;" edge="1" parent="1" source="image-upload" target="backend-notify">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 性能指标标注 -->
+        <mxCell id="performance-note" value="性能指标&lt;br/&gt;&lt;b&gt;推理延迟: 3.67ms&lt;/b&gt;&lt;br/&gt;&lt;b&gt;处理帧率: 272.53 FPS&lt;/b&gt;&lt;br/&gt;&lt;b&gt;检测精度: mAP@0.5=0.892&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffeaa7;strokeColor=#fdcb6e;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="570" width="150" height="80" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 
